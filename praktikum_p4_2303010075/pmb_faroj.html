@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+    <link rel="icon" type="image/png" href="logounper.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- ===== HEADER + MENU ===== -->
+    <div id="top">
+        <div class="left">
+            <img src="logounper.png" alt="Logo UNPER">
+            <div>
+                <h1>Universitas Perjuangan</h1>
+                <p>cageur bageur bener pinter tur singer</p>
+            </div>
+        </div>
+        <div id="menu">
+            <a href="index_faroj.html">Home</a>
+            <a href="struktur_faroj.html">Struktur Organisasi</a>
+            <a href="visimisi_faroj.html">Visi Misi</a>
+            <a href="fakultas_faroj.html">Fakultas</a>
+            <a href="bem_faroj.html">BEM</a>
+            <a href="ukm_faroj.html">UKM</a>
+            <a href="pmb_faroj.html">PMB</a>
+            <a href="hubungi_faroj.html">Hubungi Kami</a>
+        </div>
+    </div>
+
+    <!-- ===== SIDEBAR ===== -->
+    <div id="sidebar">
+        <a href="pmb_faroj.html">
+            <img src="bannerpmb.jpg" width="100%" height="250px" alt="PMB Banner">
+        </a><br>
+        <a href="https://e-journal.unper.ac.id/index.php/informatics/">
+            <img src="bannerjurnal.jpg" width="100%" height="250px" alt="Jurnal Banner">
+        </a>
+    </div>
+
+        <div id="main">
+            <td colspan="6" valign="top" width="100%">
+      <div class="pmb-container">
+        <h2>Formulir Penerimaan Mahasiswa Baru (PMB)</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <form id="pmbForm" action="pmb_faroj.php" method="POST" enctype="multipart/form-data">
+          
+          <!-- Step 1 -->
+          <div class="form-step active">
+            <h3>Data Pribadi</h3>
+            <label>Nama Lengkap</label>
+            <input type="text" name="nama_faroj" required pattern="[A-Za-z\s]+" placeholder="">
+
+            <label>NIK</label>
+            <input type="text" name="nik_faroj" required pattern="\d{16}" placeholder="16 digit angka" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+
+            <label>Tempat Lahir</label>
+            <input type="text" name="tempat_lahir_faroj" required>
+
+            <label>Tanggal Lahir</label>
+            <input type="date" name="tanggal_lahir_faroj" required>
+
+            <label>Jenis Kelamin</label>
+            <div>
+              <input type="radio" name="jk_faroj" value="Laki-laki" required> Laki-laki
+              <input type="radio" name="jk_faroj" value="Perempuan" required> Perempuan
+            </div>
+
+            <label>Agama</label>
+            <select name="agama_faroj" required>
+              <option value="">--Pilih Agama--</option>
+              <option>Islam</option><option>Kristen</option><option>Katolik</option>
+              <option>Hindu</option><option>Buddha</option><option>Konghucu</option>
+            </select>
+
+            <label>Alamat Lengkap</label>
+            <textarea name="alamat_faroj" required></textarea>
+
+            <label>Nomor HP</label>
+            <input type="tel" name="hp_faroj" required pattern="\d{10,15}" placeholder="081234567890">
+
+            <label>Email</label>
+            <input type="email" name="email_faroj" required>
+
+            <label>Status Pernikahan</label>
+            <select name="status_faroj" required>
+              <option value="">--Pilih Status--</option>
+              <option>Belum Menikah</option><option>Menikah</option><option>Cerai</option>
+            </select>
+
+            <div class="buttons" style="justify-content:end;">
+              <button type="button" id="next1">Selanjutnya</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step">
+            <h3>Data Sekolah Asal</h3>
+
+            <label>Nama Sekolah Asal</label>
+            <input type="text" name="sekolah_faroj" required>
+
+            <label>Jurusan di Sekolah</label>
+            <select name="jurusan_faroj" id="jurusan_faroj" required>
+              <option value="">--Pilih Jurusan--</option>
+              <option>IPA</option><option>IPS</option><option>Bahasa</option><option>SMK</option>
+            </select>
+
+            <div id="smkJurusanBox" style="display:none;">
+              <label>Nama Jurusan SMK</label>
+              <input type="text" name="nama_jurusan_smk_faroj" placeholder="Contoh: Teknik Komputer dan Jaringan">
+            </div>
+
+            <label>Tahun Lulus</label>
+            <input type="number" name="tahun_lulus_faroj" required pattern="\d{4}" placeholder="4 digit">
+
+            <label>NISN</label>
+            <input type="text" name="nisn_faroj" required pattern="\d{10}" placeholder="10 digit angka" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+
+            <div class="buttons">
+              <button type="button" id="prev1">Kembali</button>
+              <button type="button" id="next2">Selanjutnya</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step">
+            <h3>Pilihan Program Studi</h3>
+
+            <label>Pilihan 1 Program Studi</label>
+            <select name="prodi1_faroj" id="prodi1_faroj" required>
+              <option value="">--Pilih Program Studi--</option>
+              <option>Teknik Informatika</option><option>Sistem Informasi</option>
+              <option>Manajemen</option><option>Hukum</option>
+              <option>Akuntansi</option><option>Psikologi</option>
+            </select>
+
+            <label>Pilihan 2 Program Studi (Opsional)</label>
+            <select name="prodi2_faroj" id="prodi2_faroj">
+              <option value="">--Pilih Program Studi (Opsional)--</option>
+              <option>Teknik Informatika</option><option>Sistem Informasi</option>
+              <option>Manajemen</option><option>Hukum</option>
+              <option>Akuntansi</option><option>Psikologi</option>
+            </select>
+
+            <label>Jalur Pendaftaran</label>
+            <div>
+              <input type="radio" name="jalur_faroj" value="Reguler" required> Reguler
+              <input type="radio" name="jalur_faroj" value="Prestasi" required> Prestasi
+              <input type="radio" name="jalur_faroj" value="Afirmasi" required> Afirmasi
+            </div>
+
+            <div class="buttons">
+              <button type="button" id="prev2">Kembali</button>
+              <button type="button" id="next3">Selanjutnya</button>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="form-step">
+            <h3>Dokumen Pendukung</h3>
+
+            <label>Scan Ijazah/Surat Keterangan Lulus</label>
+            <input type="file" name="ijazah_faroj" accept=".pdf,.jpg" required>
+
+            <label>Scan KTP/KK</label>
+            <input type="file" name="ktp_faroj" accept=".pdf,.jpg" required>
+
+            <label>Pas Foto Resmi</label>
+            <input type="file" name="foto_faroj" accept=".jpg,.png" required>
+
+            <div class="buttons">
+              <button type="button" id="prev3">Kembali</button>
+              <button type="button" id="next4">Selanjutnya</button>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="form-step">
+            <h3>Pernyataan & Persetujuan</h3>
+
+            <div class="statement-box">
+              <p>Saya menyatakan bahwa semua data yang saya isikan dalam formulir PMB adalah benar, lengkap, dan dapat dipertanggungjawabkan.</p>
+              <p>Saya juga menyetujui bahwa data saya akan disimpan oleh pihak universitas sesuai ketentuan privasi dan digunakan untuk keperluan administrasi penerimaan mahasiswa baru.</p>
+            </div>
+
+            <label class="checkbox-label">
+              <input type="checkbox" name="persetujuan_faroj" id="persetujuan_faroj" required>
+              Saya telah membaca dan menyetujui pernyataan di atas.
+            </label>
+
+            <div class="buttons">
+              <button type="button" id="prev4">Kembali</button>
+              <button type="submit">Kirim Data</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </td>
+    </div>
+
+      <!-- ===== FOOTER ===== -->
+<div id="bottom">
+    <!-- Info Kampus + Media Sosial -->
+    <div class="footer-section">
+        <h3>Info Kampus</h3>
+        <div class="footer-info">
+            Universitas Perjuangan Tasikmalaya<br>
+            Jl. PETA No.177, Kahuripan, Kec. Tawang, Kota Tasikmalaya<br>
+            Jawa Barat 46115<br>
+            Telp: (0265) 312015<br>
+            Email: unper@unper.ac.id
+        </div>
+        <h3 style="margin-top:15px;">Media Sosial</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/Universitas-Perjuangan-Tasikmalaya/100064874236422/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/unper_official17/?hl=id" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/unperacid" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com/@unper_official1753?si=dhehXff_S8hmITCk" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Formulir Pesan -->
+    <div class="footer-section" id="hubungi">
+        <h3>Hubungi Kami</h3>
+        <form action="https://formspree.io/f/mwpopboo" method="POST">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <!-- ✅ Tambahan copyright -->
+        <div class="copyright">
+            &copy;  <span id="year"></span> Universitas Perjuangan Tasikmalaya. All rights reserved.
+        </div>
+    </div>
+
+    <!-- Peta Lokasi -->
+    <div class="footer-section">
+        <h3>Peta Lokasi</h3>
+        <iframe src="https://www.google.com/maps?q=Universitas%20Perjuangan%20Tasikmalaya&output=embed"></iframe>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
