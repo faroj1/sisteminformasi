@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="icon" type="image/png" href="logounper.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+<style>
+    #main {
+        padding: 20px;
+        margin: 20px auto;
+        background-color: rgba(38, 37, 37, 0.9);
+        border-radius: 10px;
+        color: white;
+        max-width: 900px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<div class="container wrapper">
+    <!-- ===== HEADER + MENU ===== -->
+    <div id="top">
+        <div class="left">
+            <img src="logounper.png" alt="Logo UNPER">
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <div>
+                <h1>Universitas Perjuangan</h1>
+                <p>cageur bageur bener pinter tur singer</p>
+            </div>
+        </div>
+        <div id="menu">
+            <a href="index_faroj.html">Home</a>
+            <a href="struktur_faroj.html">Struktur Organisasi</a>
+            <a href="visimisi_faroj.html">Visi Misi</a>
+            <a href="fakultas_faroj.html">Fakultas</a>
+            <a href="bem_faroj.html">BEM</a>
+            <a href="ukm_faroj.html">UKM</a>
+            <a href="pmb_faroj.html">PMB</a>
+            <a href="#hubungi">Hubungi Kami</a>
+        </div>
+    </div>
+
+
+    <!-- ===== MAIN CONTENT ===== -->
+<div id="main">
+    <div class="visi-misi">
+        <h3>Visi Universitas Perjuangan Tasikmalaya</h3>
+        <p>
+            Dengan berbasis kearifan lokal Universitas Perjuangan Tasikmalaya
+            unggul dalam penyelenggaraan tridharma Perguruan Tinggi yang berkarakter kejuangan
+            tahun 2035 pada tingkat nasional.
+        </p>
+
+        <h3>Misi Universitas Perjuangan Tasikmalaya</h3>
+        <ul>
+            <li>
+                Menyelenggarakan program Pendidikan berbasis kearifan lokal secara
+                kondusif, disiplin, jujur dan kreatif dalam membentuk lulusan yang
+                memiliki pengetahuan, keterampilan, dan sikap kejuangan yang
+                sesuai dengan bidang ilmu yang dikajinya;
+            </li>
+            <li>
+                Melaksanakan program penelitian ilmiah berbasis kearifan lokal
+                dengan menerapkan prinsip kejujuran, kecermatan, dan kemanfaatan dalam membentuk lulusan yang mampu melaksanakan penelitian
+                sesuai dengan bidang ilmu dan etika ilmiah yang berlaku;
+            </li>
+            <li>
+                Melakukan program pengabdian kepada masyarakat berbasis
+                kearifan lokal dengan penuh tanggung jawab dan sungguh-sungguh,
+                sehingga terbentuk lulusan yang suka dan bisa menyebarluaskan
+                pengetahuan, keterampilan, dan temuan-temuan ilmiah yang
+                dipelajarinya untuk kesejahteraan masyarakat;
+            </li>
+            <li>
+                Menciptakan suasana lingkungan kehidupan akademik yang sehat,
+                dinamis, kreatif dalam membentuk lulusan berkarakter kejuangan
+                secara optimal.
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+    <!-- ===== FOOTER ===== -->
+<div id="bottom">
+    <!-- Info Kampus + Media Sosial -->
+    <div class="footer-section">
+        <h3>Info Kampus</h3>
+        <div class="footer-info">
+            Universitas Perjuangan Tasikmalaya<br>
+            Jl. PETA No.177, Kahuripan, Kec. Tawang, Kota Tasikmalaya<br>
+            Jawa Barat 46115<br>
+            Telp: (0265) 312015<br>
+            Email: unper@unper.ac.id
+        </div>
+        <h3 style="margin-top:15px;">Media Sosial</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/Universitas-Perjuangan-Tasikmalaya/100064874236422/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/unper_official17/?hl=id" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/unperacid" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com/@unper_official1753?si=dhehXff_S8hmITCk" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+
+    <!-- Formulir Pesan -->
+    <div class="footer-section" id="hubungi">
+        <h3>Hubungi Kami</h3>
+        <form action="https://formspree.io/f/mwpopboo" method="POST">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <!-- copyright -->
+        <div class="copyright">
+            &copy;  <span id="year"></span> Universitas Perjuangan Tasikmalaya. All rights reserved.
+        </div>
+    </div>
+
+    <!-- Peta Lokasi -->
+    <div class="footer-section">
+        <h3>Peta Lokasi</h3>
+        <iframe src="https://www.google.com/maps?q=Universitas%20Perjuangan%20Tasikmalaya&output=embed"></iframe>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

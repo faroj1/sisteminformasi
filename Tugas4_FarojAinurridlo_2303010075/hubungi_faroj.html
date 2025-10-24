@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya</title>
+    <link rel="icon" type="image/png" href="logounper.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #main {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgba(38, 37, 37, 0.9);
+    border-radius: 10px;
+    color: white;
+    max-width: 900px;
+    text-align: center;
+
+    .social-icons {
+    display: flex;
+    justify-content: center; /* 🔹 Menyusun icon ke tengah secara horizontal */
+    align-items: center;     /* 🔹 (opsional) Menyusun vertikal kalau tinggi beda */
+    gap: 15px;               /* 🔹 Jarak antar icon */
+    margin-top: 10px;
+}
+}
+    </style>
+</head>
+<body>
+<div class="container wrapper">
+    <!-- ===== HEADER + MENU ===== -->
+    <div id="top">
+        <div class="left">
+            <img src="logounper.png" alt="Logo UNPER">
+            <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+            <div>
+                <h1>Universitas Perjuangan</h1>
+                <p>cageur bageur bener pinter tur singer</p>
+            </div>
+        </div>
+        <div id="menu">
+            <a href="index_faroj.html">Home</a>
+            <a href="struktur_faroj.html">Struktur Organisasi</a>
+            <a href="visimisi_faroj.html">Visi Misi</a>
+            <a href="fakultas_faroj.html">Fakultas</a>
+            <a href="bem_faroj.html">BEM</a>
+            <a href="ukm_faroj.html">UKM</a>
+            <a href="pmb_faroj.html">PMB</a>
+            <a href="hubungi_faroj.html">Hubungi Kami</a>
+        </div>
+    </div>
+
+<div id="main">
+<div>
+       
+
+<div id="bottom">
+
+    <!-- Formulir Pesan -->
+    <div class="footer-section" id="hubungi">
+        <h3>Hubungi Kami</h3>
+        <form action="https://formspree.io/f/mwpopboo" method="POST">
+            <input type="text" name="nama" placeholder="Nama Anda" required>
+            <input type="email" name="email" placeholder="Email Anda" required>
+            <textarea name="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+
+        <h3 style="margin-top:15px;">Media Sosial</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/Universitas-Perjuangan-Tasikmalaya/100064874236422/" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/unper_official17/?hl=id" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/unperacid" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://youtube.com/@unper_official1753?si=dhehXff_S8hmITCk" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <!--  copyright -->
+        <div class="copyright">
+            &copy;  <span id="year"></span> Universitas Perjuangan Tasikmalaya. All rights reserved.
+        </div>
+    </div>
+
+</div>
+ 
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
